@@ -15,9 +15,11 @@ expose:
   config:
     domain: ps-jx.org
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-ps-jx-org-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+  production: true
 jenkins:
   Servers:
     Global: {}
